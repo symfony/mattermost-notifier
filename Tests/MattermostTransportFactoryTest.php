@@ -45,6 +45,7 @@ final class MattermostTransportFactoryTest extends TestCase
         $factory = $this->createFactory();
 
         $this->expectException(IncompleteDsnException::class);
+
         $factory->create(Dsn::fromString('mattermost://host.test?channel=testChannel'));
     }
 
